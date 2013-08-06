@@ -128,3 +128,8 @@ Fields: `TEMP`, `degC`, `%temp`, `DEVICE`
 #### power:freq
 Fields: `CPU`, `wghMHz`
 
+#### UNKNOWN
+If `sar` output can be parsed, but the mapping for the event is missing, `UNKNOWN` event is emitted, with the parsed object.
+
+#### error
+If `sar` output cannot be parsed, `error` is emitted with the details
