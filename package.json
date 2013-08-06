@@ -1,0 +1,13 @@
+{
+  "name": "resmon",
+  "version": "0.0.1",
+  "author": "Bence Dányi <madbence@gmail.com>",
+  "description": "Simple parser/wrapper for `sar(1)`",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:madbence/resmon.git"
+  },
+  "keywords": ["sar", "sysstat"],
+  "main": "./parser.js",
+  "license": "MIT"
+} 
