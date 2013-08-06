@@ -6,7 +6,7 @@ var SAR = function(interval, options) {
   events.EventEmitter.call(this);
   options = options || {};
   this.interval = interval || 5;
-  this.parameters = options.parameters || '-A';
+  this.parameters = options.parameters || ['-A'];
   this._buffer = '';
 }
 
