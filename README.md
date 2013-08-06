@@ -4,16 +4,16 @@ Simple wrapper around `sar(1)`, using `EventEmitter`.
 
 ### Install
 
-  npm install resmon
+    npm install resmon
 
 ### Usage
 
-  var SAR = require('resmon');
-  var daemon = new SAR();
-  daemon.on('cpu', function(stat) {
-    /* ... */
-  });
-  daemon.start();
+    var SAR = require('resmon');
+    var daemon = new SAR();
+    daemon.on('cpu', function(stat) {
+      /* ... */
+    });
+    daemon.start();
 
 ### Events
 
@@ -21,13 +21,13 @@ For details, see `man sar`.
 
 SAR instance emits objects, the keys are field names, the values are arrays, eg. if you have multiple CPU cores:
 
-  var SAR = require('resmon');
-  var daemon = new SAR();
-  daemon.on('cpu', function(stat) {
-    console.log(stat['%usr'][0]);
-    //display CPU utilization percentage (at user level) for all CPUs
-    //usually the first row contains aggregated (sum, avg, etc.) values
-  });
+    var SAR = require('resmon');
+    var daemon = new SAR();
+    daemon.on('cpu', function(stat) {
+      console.log(stat['%usr'][0]);
+      //display CPU utilization percentage (at user level) for all CPUs
+      //usually the first row contains aggregated (sum, avg, etc.) values
+    });
 
 #### cpu
 Fields: `CPU`, `%usr`, `%nice`, `%sys`, `%iowait`, `%steal`, `%irq`, `%soft`, `%guest`, `%idle`
