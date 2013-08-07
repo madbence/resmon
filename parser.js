@@ -83,14 +83,14 @@ SAR.prototype.start = function() {
         for(var prop in mapping) {
           if(prop in data) {
             found = true;
-            this.emit(mapping[prop], data);
+            self.emit(mapping[prop], data);
             break;
           }
         }
-        found || this.emit('UNKNOWN', data);
+        found || self.emit('UNKNOWN', data);
       }
     } catch(ex) {
-      this.emit('error', ex);
+      self.emit('error', ex);
     }
   });
 }
