@@ -14,8 +14,23 @@ var daemon = new SAR();
 daemon.on('cpu', function(stat) {
   /* ... */
 });
+daemon.start(); //spawn `sar` process
+```
+
+### Options
+
+You can pass to `SAR` an optional `interval` parameter (emitter frequency, emit events every `interval` seconds), and an `options` object. Currently, the only valid option is the `parameters` array, which contains command line args to the `sar` process.
+
+Default `interval` is `5`, the default parameter is `-A` (fires all events).
+
+```js
+var daemon = new SAR(1, {
+  parameters: ['-b']
+});
 daemon.start();
 ```
+
+The above example creates a `SAR` instance, which fires only the `io` event every seconds.
 
 ### Events
 
