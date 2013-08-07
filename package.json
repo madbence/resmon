@@ -1,6 +1,6 @@
 {
   "name": "resmon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Bence Dányi <madbence@gmail.com>",
   "description": "Simple parser/wrapper for `sar(1)`",
   "repository": {
