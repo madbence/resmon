@@ -69,7 +69,7 @@ SAR.prototype.start = function() {
             return index;
           });
         }).reduce(function(columns, line, index) {
-          //transpose matrix
+          //change row-major order to column-major order
           return line.forEach(function(field, index) {
             (columns[index] || (columns[index] = [])) && columns[index].push(field);
           }), columns;
